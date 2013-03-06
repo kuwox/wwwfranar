@@ -1,0 +1,46 @@
+<h2>Franar C.A.</h2>
+<h3>Lista de Precios</h3>
+<h4>Bienvenido:</h4>
+
+<table>
+<tr>
+<th>Nombre</th>
+<th>Nombre de Usuario</th>
+<th>Correo Electrónico</th>
+<th>Descargar Lista</th>
+</tr>
+<?php ($session->read('Auth'));
+		$name = ($session->read('Auth'));
+	
+
+?>
+
+<tr>
+<td>
+<?php print_r($name['User']['name']) ?>
+</td>
+<td>
+<?php print_r($name['User']['username']) ?>
+</td>
+<td>
+<?php print_r($name['User']['email']) ?>
+</td>
+<td>
+	<li>
+	
+		<?php
+		    // se pasan el id y el nombre del usuario
+			$id_usuario= $name['User']['id'];
+			$nombre_usuario = $name['User']['name'];
+			$urllista = $this->Html->link(('Lista de precios'), '/marcadeagua/seleccionar_lista.php?usr='.$id_usuario.'&nbusr='.$nombre_usuario, array('class'=>'ext','target' => '_blank'));
+
+			echo $this->Html->link(('Lista de precios'), '/marcadeagua/seleccionar_lista.php?usr='.$id_usuario.'&nbusr='.$nombre_usuario, array('onclick'=>'newPopup','class'=>'ext','target' => '_blank'));
+		?>
+		
+	</li>
+
+	</td>
+</tr>
+
+</table>
+<a href="/loginapplista/users/logout" class="button">Cerrar Sesión</a>

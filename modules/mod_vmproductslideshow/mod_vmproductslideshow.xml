@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<name>VirtueMart Product SlideShow</name>
+	<author>Virgilio Quilario Jr</author>
+	<creationDate>October 12 2008</creationDate>
+	<copyright>Copyright (C) 2009 Jamp Mark Web Creations</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>virgil@jampmark.com</authorEmail>
+	<authorUrl>http://www.jampmark.com</authorUrl>
+	<version>1.015</version>
+	<description><![CDATA[
+		Virtuemart Product Slideshow version 1.015 for Joomla 1.5.x / Virtuemart 1.1.x.
+		
+		<p>Please support this extension:<br />
+			<a href="http://extensions.joomla.org/component/option,com_mtree/task,viewlink/link_id,6321/Itemid,35/" target="_blank">VOTE</a> if you like this extension, and/or<br />
+			<a href="http://www.jampmark.com/virtuemart-product-slideshow.html" target="_blank">DONATE</a> if you find this extension useful.</p>
+		<p>Visit the <a href="http://www.jampmark.com/virtuemart-product-slideshow.html" target="_blank">Project Main Page</a> for more information, suggestions and support.</p>
+	]]>
+		
+	</description>
+	<files>
+		<filename module="mod_vmproductslideshow">mod_vmproductslideshow.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl/</folder>
+	</files>
+	<params>
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="a string that gets appended to the css class of the module, this allows styling of individual or multiple slideshow module instances at once" />
+		<param name="instanceSuffix" type="text" default="" label="Instance Suffix" description="a string that gets appended to the slideshow javascript variable names to make each instance unique, this allows showing of multiple slideshows on a single page" />
+	  	<param name="@spacer" type="spacer" default="" label="" description="" />
+	  	<param name="width" type="text" default="430" label="Width" description="Width of the Slideshow in pixels" />
+	  	<param name="height" type="text" default="300" label="Height" description="Height of the Slideshow in pixels" />
+	  	<param name="@spacer" type="spacer" default="" label="" description="" />
+	  	<param name="showProgressBar" type="radio" default="1" label="Show Progress Bar" description="Shows a visual loading progress bar of loading product images">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+	  	</param>
+	  	<param name="@spacer" type="spacer" default="" label="" description="" />
+	  	<param name="showCaptions" type="radio" default="1" label="Show Captions" description="Shows the animated captions area">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="captionHeight" type="text" default="30" label="Caption Height" description="Height of the animated captions area in pixels" />
+		<param name="captionBackgroundColor" type="text" default="#333" label="Caption Background Color" description="Background color of the animated captions area" />
+		
+	  	<param name="showProductName" type="radio" default="1" label="Show Product Name" description="Shows the product name if available inside the animated captions area">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="productNameSize" type="text" default="13px" label="Product Name Size" description="Size of the product name" />
+		<param name="productNameColor" type="text" default="#fff" label="Product Name Color" description="Color of the product name" />
+
+	  	<param name="showProductShortDesc" type="radio" default="0" label="Show Product Short Description" description="shows the product short description if available inside the animated captions area">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="productShortDescSize" type="text" default="11px" label="Product Short Description Size" description="Size of the product short description" />
+		<param name="productShortDescColor" type="text" default="#ccc" label="Product Short Description Color" description="Color of the product short description" />
+
+	  	<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+	  	<param name="productCategoryId" type="text" default="0" label="Product Category Id" description="Slideshows products in a specific category (0 - all categories)" />
+	  	<param name="specialProducts" type="radio" default="0" label="Featured Products Only" description="Only slideshows products that are marked special">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="sortOrder" type="list" default="0" label="Sort Order" description="The order in which products are shown in the slideshow">
+			<option value="newest">Newest</option>
+			<option value="oldest">Oldest</option>
+			<option value="random">Random</option>
+		</param>
+		<param name="numProducts" type="text" default="5" label="Number of Products" description="The number of products to use in the slideshow" />
+
+	  	<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="productImageType" type="list" default="thumb" label="Product Image Type" description="Type of product image to show">
+			<option value="thumb">Thumbnail Image</option>
+			<option value="full">Full Image</option>
+		</param>
+		<param name="productImageResize" type="radio" default="1" label="Dynamic Product Image Resizing" description="Dynamically resizes the images, set to No if you are experiencing problems with effects">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="slideDuration" type="text" default="5000" label="Slide Duration" description="Amount of time in milliseconds that each slide should stay in the display" />
+		<param name="slideEffect" type="list" default="combo" label="Slide Effect" description="Select from 6 effects to apply for displaying slides">
+			<option value="fade">Fading</option>
+			<option value="zoom">Zooming</option>
+			<option value="pan">Panning</option>
+			<option value="combo">Combo - Ken Burns Effects</option>
+			<option value="push">Pushing</option>
+			<option value="wipe">Wiping</option>
+		</param>
+		<param name="panPercent" type="text" default="50" label="Pan Percent" description="Amount of panning for Panning and Combo effects (0 - 100%)" />
+		<param name="zoomPercent" type="text" default="50" label="Zoom Percent" description="Amount of zooming for Zooming and Combo effects (0 - 100%)" />
+		<param name="transTypePW" type="list" default="Expo.easeOut" label="Push/Wipe Transition Type" description="Select from 30 mootools transition types for Push/Wipe effects">
+			<option value="linear">linear</option>
+			<option value="Quad.easeOut">Quad.easeOut</option>
+			<option value="Quad.easeIn">Quad.easeIn</option>
+			<option value="Quad.easeInOut">Quad.easeInOut</option>
+			<option value="Cubic.easeOut">Cubic.easeOut</option>
+			<option value="Cubic.easeIn">Cubic.easeIn</option>
+			<option value="Cubic.easeInOut">Cubic.easeInOut</option>
+			<option value="Quart.easeOut">Quart.easeOut</option>
+			<option value="Quart.easeIn">Quart.easeIn</option>
+			<option value="Quart.easeInOut">Quart.easeInOut</option>
+			<option value="Quint.easeOut">Quint.easeOut</option>
+			<option value="Quint.easeIn">Quint.easeIn</option>
+			<option value="Quint.easeInOut">Quint.easeInOut</option>
+			<option value="Expo.easeOut">Expo.easeOut</option>
+			<option value="Expo.easeIn">Expo.easeIn</option>
+			<option value="Expo.easeInOut">Expo.easeInOut</option>
+			<option value="Circ.easeOut">Circ.easeOut</option>
+			<option value="Circ.easeIn">Circ.easeIn</option>
+			<option value="Circ.easeInOut">Circ.easeInOut</option>
+			<option value="Sine.easeOut">Sine.easeOut</option>
+			<option value="Sine.easeIn">Sine.easeIn</option>
+			<option value="Sine.easeInOut">Sine.easeInOut</option>
+			<option value="Back.easeOut">Back.easeOut</option>
+			<option value="Back.easeIn">Back.easeIn</option>
+			<option value="Back.easeInOut">Back.easeInOut</option>
+			<option value="Bounce.easeOut">Bounce.easeOut</option>
+			<option value="Bounce.easeIn">Bounce.easeIn</option>
+			<option value="Bounce.easeInOut">Bounce.easeInOut</option>
+			<option value="Elastic.easeOut">Elastic.easeOut</option>
+			<option value="Elastic.easeIn">Elastic.easeIn</option>
+			<option value="Elastic.easeInOut">Elastic.easeInOut</option>
+		</param>
+		<param name="transDuration" type="text" default="750" label="Transition Duration" description="Amount of time in milliseconds that a transition animation should run in between slides" />
+	</params>
+</install>

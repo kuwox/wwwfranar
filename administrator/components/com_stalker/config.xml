@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<params>
+		<param name="globalimageset" type="folderlist" default="default" label="Select an Image Set" directory="/media/stalker/icons" filter="" exclude="" stripext="" hide_none="1" hide_default="1" />
+	</params>
+</config>

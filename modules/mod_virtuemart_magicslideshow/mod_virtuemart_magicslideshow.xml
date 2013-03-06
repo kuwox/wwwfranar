@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+    <name>Magic Slideshow module for Joomla 1.5 with VirtueMart</name>
+    <creationDate>26.10.2011</creationDate>
+    <author>MagicToolbox</author>
+    <copyright>MagicToolbox.com</copyright>
+    <authorEmail>support@magictoolbox.com</authorEmail>
+    <authorUrl>http://magictoolbox.com</authorUrl>
+    <version>v4.3.15 [v1.0.40:v1.1.18]</version>
+    <description>Magic Slideshow&amp;#8482; lets you display one image after another in rotation. It's easy to install and customise on your website. Try out some customisation options http://www.magictoolbox.com/magicslideshow/integration/. By http://www.magictoolbox.com/.</description>
+    <files>
+        <filename>core/graphics/arrows01.png</filename><filename>core/graphics/arrows02.png</filename><filename>core/graphics/arrows03.png</filename><filename>core/graphics/arrows04.png</filename><filename>core/graphics/arrows05.png</filename><filename>core/graphics/arrows06.png</filename><filename>core/graphics/arrows07-small.png</filename><filename>core/graphics/arrows07.png</filename><filename>core/graphics/arrows08-full.gif</filename><filename>core/graphics/arrows08.gif</filename><filename>core/graphics/arrows09.png</filename><filename>core/graphics/index.html</filename><filename>core/graphics/loader.gif</filename><filename>core/index.html</filename><filename>core/magicslideshow.css</filename><filename>core/magicslideshow.js</filename><filename>core/utils.js</filename><filename>index.html</filename><filename>magicslideshow.module.core.class.php</filename><filename>magictoolbox.attributeshelper.class.php</filename><filename>magictoolbox.imagehelper.class.php</filename><filename>magictoolbox.makethumb.class.php</filename><filename>magictoolbox.options.class.php</filename><filename>magictoolbox.params.class.php</filename><filename>magictoolbox.templatehelper.class.php</filename><filename>mod_virtuemart_magicslideshow.php</filename><filename>mod_virtuemart_magicslideshow.xml</filename><filename>mod_virtuemart_magicslideshow_10.xml</filename><filename>templates/bottom.tpl.php</filename><filename>templates/index.html</filename><filename>templates/left.tpl.php</filename><filename>templates/right.tpl.php</filename><filename>templates/top.tpl.php</filename>
+    </files>
+    <params>
+        <param name="mode" type="list" default="random products" label="Mode" description="Mode">
+            <option value="random category">random category</option>
+            <option value="random products">random products</option>
+            <option value="category">category</option>
+            <option value="items">items</option>
+            <option value="featured products">featured products</option>
+            <option value="latest products">latest products</option>
+        </param>
+        <param name="cids" type="text" default="" label="Category ids" />
+        <param name="pids" type="text" default="" label="Product ids" />
+        <param name="maxc" type="text" default="3" label="Max count of categories" />
+        <param name="maxp" type="text" default="10" label="Max count of products" />
+
+    </params>
+</install>

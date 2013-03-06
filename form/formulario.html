@@ -1,0 +1,20 @@
+<html>
+<head><title>Formulario de contacto</title></head>
+<body>
+<form action="http://www.franar.com.ve/form/formmail.php" method="post">
+<input type="hidden" name="recipient" value="juan.spolisino@gmail.com"/>
+<input type="hidden" name="required" value="subject,message"/>
+<input type="hidden" name="env_report" value="REMOTE_ADDR,HTTP_USER_AGENT"/>
+ 
+<table border="0">
+<tr><td colspan="2">Los campos con asterisco son obligatorios.</td></tr>
+<tr><td>E-mail *</td><td><input type="text" size="50" name="email"/></td></tr>
+<tr><td>Nombre</td><td><input type="text" size="50" name="realname"/></td></tr>
+<tr><td>Asunto</td><td><input type="text" size="50" name="subject"/></td></tr>
+<tr><td>Mensaje *</td><td><textarea cols="50" rows="15" name="message"></textarea></td></tr>
+<tr><td colspan="2" align="center"><input type="submit" value="submit"/></td></tr>
+</table>
+
+</form>
+</body>
+</html>

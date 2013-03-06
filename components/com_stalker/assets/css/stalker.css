@@ -1,0 +1,70 @@
+#comstalker { width: 100%; }
+
+#comstalker ul {
+	background:none!important;
+	list-style:none!important;
+	margin:0px!important;
+	padding:0px!important;
+}
+
+#comstalker ul li {
+	background:none!important;
+	list-style:none!important;
+	margin:0px!important;
+	padding:0px 5px 0px 0px!important;
+}
+
+#comstalkerleft { text-align: left; float:left; width: auto;}
+#comstalkerright { text-align: right; float:right; width: auto; }
+#comstalkercenter { text-align: center; margin: 0px auto;}
+#comstalkerhoriz { text-align: center; float:none; width: auto; }
+
+#comstalker .leftnotext {
+	padding:0px 2px 1px 0px;
+	float:left;
+}
+
+#comstalker .rightnotext {
+	padding:0px 2px 1px 0px;
+	display: inline;
+}
+
+#comstalker .centernotext, 
+#comstalker .horiznotext {
+	display: inline;
+}
+
+#comstalker .leftwithtext, 
+#comstalker .rightwithtext, 
+#comstalker .centerwithtext {
+	float: none;
+	display:block;
+}
+
+#comstalker .horizwithtext {
+	float: none;
+	display:inline;
+}
+
+#comstalker .clear {
+	clear: both;
+}
+
+#comstalker a { 
+	text-decoration: none; 
+	color: #000000; 
+	white-space: nowrap;
+}
+
+#comstalker a:hover { 
+	text-decoration: none; 
+	color: #FF0000; 
+	white-space: nowrap;
+}
+
+#comstalker img { 
+	padding-bottom: 1px;
+	vertical-align: middle; 
+	border: solid 0; 
+}
+

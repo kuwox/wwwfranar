@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://www.joomla.org/xml/dtd/1.5/module-install.dtd">
+<install type="module" version="1.5.0">
+  <name>Ultimate Virtuemart  Tiny Slider Slideshow </name>
+  <author>Arjun</author>
+  <creationDate>April 09</creationDate>
+  <authorUrl>http://sourceforge.net/users/arjuninfo</authorUrl>
+   <copyright>Copyright (C) 2005 - 2008 Open Source Matters. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>1.5-2</version>
+   <description>Ultimate Tiny Slider Slideshow horizontal with navigations</description>
+  <files>
+    <filename module="mod_tinyslider">mod_tinyslider.php</filename>
+  </files>
+  
+  <images>
+		<filename>images/arrow_left.jpg</filename>
+		<filename>images/arrow_right.jpg</filename>
+	</images>
+	
+	
+</install>

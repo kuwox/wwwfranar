@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD plugin 1.0//EN" "http://dev.joomla.org/xml/1.5/plugin-install.dtd">
+<install version="1.5" type="plugin" group="content" method="upgrade">
+	<name>Content - Stalker</name>
+	<author>Nick Texidor</author>
+	<authorEmail>nick@texidor.com</authorEmail>
+	<authorUrl>http://www.nicktexidor.com/</authorUrl>
+	<creationDate>16 March 2010</creationDate>
+	<copyright>Copyright (C) 2008-2010 Nick Texidor. All rights reserved.</copyright>
+	<license>GNU/GPL</license>
+	<version>1.2.0</version>
+
+	<description>
+		Show icons, with links, to all your social-networking sites
+	</description>
+
+	<files>
+		<filename plugin="stalker">stalker.php</filename>
+		<filename plugin="stalker">stalker/index.html</filename>
+		<filename plugin="stalker">stalker/versions.txt</filename>
+		<filename plugin="stalker">stalker/css/index.html</filename>
+		<filename plugin="stalker">stalker/css/stalker.css</filename>
+	</files>
+
+	<languages>
+		<language tag="en-GB">en-GB.plg_stalker.ini</language>
+	</languages>
+
+	<administration>
+		<languages >
+			<language tag="en-GB">language/en-GB/en-GB.plg_stalker.ini</language>
+		</languages>
+	</administration>
+
+	<params />
+</install>

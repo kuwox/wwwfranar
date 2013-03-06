@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/module-install.dtd">
+<install version="1.5" type="module" client="site" method="upgrade">
+	<name>Stalker</name>
+	<author>Nick Texidor</author>
+	<authorEmail>nick@texidor.com</authorEmail>
+	<authorUrl>http://www.nicktexidor.com/</authorUrl>
+	<creationDate>8 September 2010</creationDate>
+	<copyright>Copyright (C) 2008-2010 Nick Texidor. All rights reserved.</copyright>
+	<license>GNU/GPL</license>
+	<version>1.2.1</version>
+	<description>Displays icons for your online social networking sites.</description>
+
+	<languages folder="languages">
+		<language tag="en-GB">en-GB.mod_stalker.ini</language>
+	</languages>
+
+	<files>
+		<filename module="mod_stalker">mod_stalker.php</filename>
+        <filename>gpl.txt</filename>
+		<filename>helper.php</filename>
+        <filename>index.html</filename>
+        <filename>versions.txt</filename>
+
+        <filename>assets/index.html</filename>
+        <filename>assets/css/index.html</filename>
+        <filename>assets/css/stalker.css</filename>
+
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+	</files>
+
+    <media folder="media/icons" destination="stalker/icons">
+		<folder>black</folder>
+		<folder>default</folder>
+	</media>
+
+    <params>
+		<param name="moduleclass_sfx" type="text" default="" label="MODSUFFIX" description="MODSUFFIXDESC" />
+    	
+		<param name="@spacer" type="spacer" default="" label="" description=""></param>
+
+		<param name="iconsize" type="list" default='32' label="ICONSIZELABEL" description="ICONSIZEDESC">
+		<option value='16'>16px</option>
+		<option value='20'>20px</option>
+		<option value='24'>24px</option>
+		<option value='28'>28px</option>
+		<option value='32'>32px</option>
+		<option value='36'>36px</option>
+		<option value='40'>40px</option>
+		<option value='44'>44px</option>
+		<option value='48'>48px</option>
+		<option value='52'>52px</option>
+		<option value='56'>56px</option>
+		<option value='60'>60px</option>
+		<option value='64'>64px</option>
+		</param>
+
+		<param name="style" type="list" default='0' label="STYLELABEL" description="STYLEDESC">
+		<option value='0'>Images</option>
+		<option value='1'>List</option>
+		<option value='2'>Text</option>
+		</param>
+
+		<param name="position" type="list" default='left' label="POSITIONLABEL" description="POSITIONDESC">
+		<option value='left'>Left</option>
+		<option value='center'>Center</option>
+		<option value='right'>Right</option>
+		<option value='horiz'>Horizontal (for List/Text)</option>
+		</param>
+
+		<param name="imageset" type="folderlist" default="default" label="IMAGESETLABEL" description="IMAGESETDESC" directory="/media/stalker/icons" filter="" exclude="" stripext="" hide_none="0" hide_default="1" />
+
+		<param name="@spacer" type="spacer" default="" label="" description=""></param>
+
+	    <param name="usedb" type="list" default='0' label="USEDBLABEL" description="USEDBDESC">
+		<option value='0'>No</option>
+		<option value='1'>Yes</option>
+		</param>
+
+		<param name="stalkergroup" type="text" default='' label="GROUPLABEL" description="GROUPDESC"></param>
+
+    	<param name="@spacer" type="spacer" default="" label="" description=""></param>
+
+		<param name="beboname" type="text" default='' label="BEBONAMELABEL" description="BEBONAMEDESC"></param>
+		<param name="blinklistname" type="text" default='' label="BLINKLISTNAMELABEL" description="BLINKLISTNAMEDESC"></param>
+		<param name="blogmarksname" type="text" default='' label="BLOGMARKSNAMELABEL" description="BLOGMARKSNAMEDESC"></param>
+		<param name="brightkitename" type="text" default='' label="BRIGHTKITENAMELABEL" description="BRIGHTKITENAMEDESC"></param>
+		<param name="deliciousname" type="text" default='' label="DELICIOUSNAMELABEL" description="DELICIOUSNAMEDESC"></param>
+		<param name="diggname" type="text" default='' label="DIGGNAMELABEL" description="DIGGNAMEDESC"></param>
+		<param name="diigoname" type="text" default='' label="DIIGONAMELABEL" description="DIIGONAMEDESC"></param>
+		<param name="facebookname" type="text" default='' label="FACEBOOKNAMELABEL" description="FACEBOOKNAMEDESC"></param>
+		<param name="facebookgrpname" type="text" default='' label="FACEBOOKGRPNAMELABEL" description="FACEBOOKGRPNAMEDESC"></param>
+		<param name="facebookpagename" type="text" default='' label="FACEBOOKPAGENAMELABEL" description="FACEBOOKPAGENAMEDESC"></param>
+		<param name="feedburnername" type="text" default='' label="FEEDBURNERNAMELABEL" description="FEEDBURNERNAMEDESC"></param>
+		<param name="flickrname" type="text" default='' label="FLICKRNAMELABEL" description="FLICKRNAMEDESC"></param>
+		<param name="friendfeedname" type="text" default='' label="FRIENDFEEDNAMELABEL" description="FRIENDFEEDNAMEDESC"></param>
+		<param name="friendstername" type="text" default='' label="FRIENDSTERNAMELABEL" description="FRIENDSTERNAMEDESC"></param>
+		<param name="hi5name" type="text" default='' label="HI5NAMELABEL" description="HI5NAMEDESC"></param>
+		<param name="hyvesname" type="text" default='' label="HYVESNAMELABEL" description="HYVESNAMEDESC"></param>
+		<param name="jaikuname" type="text" default='' label="JAIKUNAMELABEL" description="JAIKUNAMEDESC"></param>
+		<param name="kwippyname" type="text" default='' label="KWIPPYNAMELABEL" description="KWIPPYNAMEDESC"></param>
+		<param name="lastfmname" type="text" default='' label="LASTFMNAMELABEL" description="LASTFMNAMEDESC"></param>
+		<param name="lastfmartname" type="text" default='' label="LASTFMARTNAMELABEL" description="LASTFMARTNAMEDESC"></param>
+		<param name="linkedinname" type="text" default='' label="LINKEDINNAMELABEL" description="LINKEDINNAMEDESC"></param>
+		<param name="linkedingrpname" type="text" default='' label="LINKEDINGRPNAMELABEL" description="LINKEDINGRPNAMEDESC"></param>
+		<param name="meetupname" type="text" default='' label="MEETUPNAMELABEL" description="MEETUPNAMEDESC"></param>
+		<param name="metacafename" type="text" default='' label="METACAFENAMELABEL" description="METACAFENAMEDESC"></param>
+		<param name="misterwongname" type="text" default='' label="MISTERWONGNAMELABEL" description="MISTERONGNAMEDESC"></param>
+		<param name="myspacename" type="text" default='' label="MYSPACENAMELABEL" description="MYSPACENAMEDESC"></param>
+		<param name="netvibesname" type="text" default='' label="NETVIBESNAMELABEL" description="NETVIBESNAMEDESC"></param>
+		<param name="newsvinename" type="text" default='' label="NEWSVINENAMELABEL" description="NEWSVINENAMEDESC"></param>
+		<param name="ningname" type="text" default='' label="NINGNAMELABEL" description="NINGNAMEDESC"></param>
+		<param name="orkutname" type="text" default='' label="ORKUTNAMELABEL" description="ORKUTNAMEDESC"></param>
+		<param name="photobucketname" type="text" default='' label="PHOTOBUCKETNAMELABEL" description="PHOTOBUCKETNAMEDESC"></param>
+		<param name="picasaname" type="text" default='' label="PICASANAMELABEL" description="PICASANAMEDESC"></param>
+		<param name="plurkname" type="text" default='' label="PLURKNAMELABEL" description="PLURKNAMEDESC"></param>
+		<param name="qikname" type="text" default='' label="QIKNAMELABEL" description="QIKNAMEDESC"></param>
+		<param name="readername" type="text" default='' label="READERNAMELABEL" description="READERNAMEDESC"></param>
+		<param name="redditname" type="text" default='' label="REDDITNAMELABEL" description="REDDITNAMEDESC"></param>
+		<param name="simpyname" type="text" default='' label="SIMPYNAMELABEL" description="SIMPYNAMEDESC"></param>
+		<param name="stumbleuponname" type="text" default='' label="STUMBLEUPONNAMELABEL" description="STUMBLEUPONNAMEDESC"></param>
+		<param name="technoratiname" type="text" default='' label="TECHNORATINAMELABEL" description="TECHNORATINAMEDESC"></param>
+		<param name="tumblrname" type="text" default='' label="TUMBLRNAMELABEL" description="TUMBLRNAMEDESC"></param>
+		<param name="twittername" type="text" default='' label="TWITTERNAMELABEL" description="TWITTERNAMEDESC"></param>
+		<param name="voxname" type="text" default='' label="VOXNAMELABEL" description="VOXNAMEDESC"></param>
+		<param name="vimeoname" type="text" default='' label="VIMEONAMELABEL" description="VIMEONAMEDESC"></param>
+		<param name="xboxname" type="text" default='' label="XBOXLIVENAMELABEL" description="XBOXLIVENAMEDESC"></param>
+		<param name="xingname" type="text" default='' label="XINGNAMELABEL" description="XINGNAMEDESC"></param>
+		<param name="youtubename" type="text" default='' label="YOUTUBENAMELABEL" description="YOUTUBENAMEDESC"></param>
+		<param name="extlinkname" type="text" default='' label="EXTLINKNAMELABEL" description="EXTLINKNAMEDESC"></param>
+
+    </params>
+
+	<params group="advanced">
+		<param name="cache" type="list" default="0" label="CACHE" description="CACHEDESC">
+<!--			<option value="1">USEGLOBAL</option> -->
+			<option value="0">NOCACHE</option>
+		</param>
+		<param name="cache_time" type="text" default="900" label="CACHETIME" description="CACHETIMEDESC" />
+	</params>
+</install>

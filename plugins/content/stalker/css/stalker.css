@@ -1,0 +1,70 @@
+#plgstalker { width: 100%; }
+
+#plgstalker ul {
+	background:none!important;
+	list-style:none!important;
+	margin:0px!important;
+	padding:0px!important;
+}
+
+#plgstalker ul li {
+	background:none!important;
+	list-style:none!important;
+	margin:0px!important;
+	padding:0px 5px 0px 0px!important;
+}
+
+#plgstalkerleft { text-align: left; float:left; width: auto;}
+#plgstalkerright { text-align: right; float:right; width: auto; }
+#plgstalkercenter { text-align: center; margin: 0px auto;}
+#plgstalkerhoriz { text-align: center; float:none; width: auto; }
+
+#plgstalker .leftnotext {
+	padding:0px 2px 1px 0px;
+	float:left;
+}
+
+#plgstalker .rightnotext {
+	padding:0px 2px 1px 0px;
+	display: inline;
+}
+
+#plgstalker .centernotext, 
+#plgstalker .horiznotext {
+	display: inline;
+}
+
+#plgstalker .leftwithtext, 
+#plgstalker .rightwithtext, 
+#plgstalker .centerwithtext {
+	float: none;
+	display:block;
+}
+
+#plgstalker .horizwithtext {
+	float: none;
+	display:inline;
+}
+
+#plgstalker .clear {
+	clear: both;
+}
+
+#plgstalker a { 
+	text-decoration: none; 
+	color: #000000; 
+	white-space: nowrap;
+}
+
+#plgstalker a:hover { 
+	text-decoration: none; 
+	color: #FF0000; 
+	white-space: nowrap;
+}
+
+#plgstalker img { 
+	padding-bottom: 1px;
+	vertical-align: middle; 
+	border: solid 0; 
+}
+

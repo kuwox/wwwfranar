@@ -1,0 +1,72 @@
+/* Css Document */
+
+table.mod_show_product {
+   border: 1px solid #ccc;
+padding: 10px;
+}
+
+td.product_picture img {
+width: 100px;
+}
+
+
+td.product_picture a img {
+border: none;
+}
+
+
+span.TipCls2{
+width: 200px;
+display: block;
+}
+
+span.name div.product_desc {
+text-align: center;
+display: block;
+font-weight: bold;
+color: #666;
+}
+
+div.product_desc {
+    color: #ff5900;
+   }
+   
+span.name {
+    font-weight: normal;
+    
+}
+
+
+
+div.tooltip_desc {
+position: absolute;
+left: 50%;
+top: 30%;
+width: 200px;
+color: #000;
+border: 1px solid #666;
+display: none;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+}
+
+div#show_product_holder {
+position: relative;
+float: right;
+}
+
+
+
+div#show_product_holder:hover .tooltip_desc {
+display: block;
+background: #fff;
+}
+
+span.tooltip_idesc ul li {
+list-style: none;
+}
+
+span.tooltip_idesc {
+margin: 10px;
+display: block;
+}

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/component-install.dtd">
+<install method="upgrade" type="component" version="1.5.0">
+	<name>PhocaDownload</name>
+	<creationDate>09/06/2010</creationDate>
+	<author>Jan Pavelka (www.phoca.cz)</author>
+	<authorEmail></authorEmail>
+	<authorUrl>www.phoca.cz</authorUrl>
+	<copyright>Jan Pavelka</copyright>
+	<license>GNU/GPL</license>
+	<!-- The version string is recorded in the components table -->
+	<version>1.3.6</version>
+	<!-- The description is optional and defaults to the name -->
+	<description>Phoca Download</description>
+
+	<!-- Install Database Section -->
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">install.sql</file>
+		</sql>
+	</install>
+
+	<!-- Uninstall Database Section -->
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">uninstall.sql</file>
+		</sql>
+	</uninstall>
+
+	<!-- Custom Install Script to execute -->
+	<installfile>install.phocadownload.php</installfile>
+
+	<!-- Custom Uninstall Script to execute -->
+	<uninstallfile>uninstall.phocadownload.php</uninstallfile>
+
+	
+	<!-- Administration -->
+	<administration>
+		<menu img="components/com_phocadownload/assets/images/icon-16-pdl-menu.png" link="option=com_phocadownload">Phoca Download</menu>
+		<submenu>
+			<menu img="components/com_phocadownload/assets/images/icon-16-pdl-control-panel.png" link="option=com_phocadownload">Control Panel</menu>
+			<menu img="components/com_phocadownload/assets/images/icon-16-pdl-menu-files.png" link="option=com_phocadownload&amp;view=phocadownloads">Files</menu>
+			<menu img="components/com_phocadownload/assets/images/icon-16-pdl-menu-section.png" link="option=com_phocadownload&amp;view=phocadownloadsecs">Sections</menu>
+			<menu img="components/com_phocadownload/assets/images/icon-16-pdl-menu-category.png" link="option=com_phocadownload&amp;view=phocadownloadcats">Categories</menu>
+			<menu img="components/com_phocadownload/assets/images/icon-16-pdl-menu-lic.png" link="option=com_phocadownload&amp;view=phocadownloadlics">Licenses</menu>
+			<menu img="components/com_phocadownload/assets/images/icon-16-pdl-menu-settings.png" link="option=com_phocadownload&amp;view=phocadownloadset">Settings</menu>
+			<menu img="components/com_phocadownload/assets/images/icon-16-pdl-menu-stat.png" link="option=com_phocadownload&amp;view=phocadownloadstat">Statistics</menu>
+			<menu img="components/com_phocadownload/assets/images/icon-16-pdl-menu-users.png" link="option=com_phocadownload&amp;view=phocadownloadusers">PHOCADOWNLOAD_USERS</menu>
+			<menu img="components/com_phocadownload/assets/images/icon-16-pdl-menu-info.png" link="option=com_phocadownload&amp;view=phocadownloadinfo">Info</menu>
+		</submenu>
+	</administration>
+</install>

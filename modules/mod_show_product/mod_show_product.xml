@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+    <!-- Name of the Module -->
+        <name>Show Viruemart product</name> 
+ 
+    <!-- Name of the Author -->
+        <author>Jetserver Web Services</author> 
+ 
+    <!-- Version Date of the Module -->
+        <creationDate>2009-08-01</creationDate> 
+ 
+    <!-- Copyright information -->
+        <copyright>All rights reserved by Jetserver.co.il</copyright> 
+ 
+    <!-- License Information -->
+        <license>GPL 2.0</license> 
+ 
+    <!-- Author's email address -->
+        <authorEmail>admin@jetserver.co.il</authorEmail> 
+ 
+    <!-- Author's website -->
+        <authorUrl>www.jetserver.co.il</authorUrl> 
+ 
+    <!-- Module version number -->
+        <version>1.0.2</version> 
+ 
+    <!-- Description of what the module does -->
+        <description>
+		Shows virtuemart product (one product) <BR/>
+		New version: 1.0.2 <BR />
+		Tooltip error fix (moved to css based tooltip). <BR />
+		Minor HTML errors where fixed. <BR />
+		Added more funcuality to the module.
+		</description>
+ 
+    <!-- Listing of all files that should be installed for the module to function -->
+        <files>
+        <!-- The "module" attribute signifies that this is the main controller file -->
+                <filename module="mod_show_product">mod_show_product.php</filename>
+                <filename module="mod_show_product">index.html</filename>
+				<filename module="mod_show_product">mod_show_product.css</filename>
+								<filename module="mod_show_product">noimage.jpg</filename>
+				<filename module="mod_show_product">slimbox/css/closelabel.gif</filename>
+				<filename module="mod_show_product">slimbox/css/loading.gif</filename>
+				<filename module="mod_show_product">slimbox/css/nextlabel.gif</filename>
+				<filename module="mod_show_product">slimbox/css/prevlabel.gif</filename>
+				<filename module="mod_show_product">slimbox/css/slimbox2.css</filename>
+				<filename module="mod_show_product">slimbox/css/index.html</filename>
+				<filename module="mod_show_product">slimbox/js/jquery.js</filename>
+				<filename module="mod_show_product">slimbox/js/slimbox2.js</filename>
+				<filename module="mod_show_product">slimbox/js/index.html</filename>
+				</files>
+ 
+ <params>
+	<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />	<param name="product_id" type="text" default="0" label="Virtuemart Product id: " description="PARAMSVMPRODUCTID" />
+	<param name="currency_sign" type="text" default="$" label="Currency Sign: " description="PARAMSVMPRODUCTIDCURRENCY" />
+	
+	<param name="showname" type="radio" default="0" label="Show name?" description="PARAMSVMPRODUCTSHOWNAME">
+			<option value="0">Yes</option>
+			<option value="1">No</option>
+	</param>
+	<param name="showprice" type="radio" default="0" label="Show Price?" description="PARAMSVMPRODUCTSHOWPRICE">
+			<option value="0">Yes</option>
+			<option value="1">No</option>
+	</param>
+	
+	<param name="showviewproduct" type="radio" default="0" label="Show 'view product' ?" description="PARAMSVMPRODUCTSHOWVIEWPRODUCT">
+			<option value="0">Yes</option>
+			<option value="1">No</option>
+	</param>	
+	
+	<param name="viewproduct_text" type="text" default="[ view product ]" label="View product text: " description="PARAMSVMPRODUCTVIEWTEXT" />
+	<param name="use_vat" type="radio" default="1" label="Use VAT?" description="PARAMSVMPRODUCTUSEVAT">
+			<option value="0">Yes</option>
+			<option value="1">No</option>
+	</param>
+	<param name="vat_valute" type="text" default="1.165" label="VAT Value? (example: for 16.5% use 1.165)" description="PARAMSVMPRODUCTVATVALUE" />
+	<param name="lightbox" type="radio" default="0" label="Use Internal Lightbox effect? NOTE: THIS CANNOT WORK WITH AJAX CART! If you are experiencing JS errors turn this feature off." description="PARAMSVMPRODUCTLIGHTBOX">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+	</param>
+	<param name="tooltip" type="radio" default="0" label="Description tooptip?" description="PARAMSVMPRODUCTUSETOOLTIP">
+			<option value="0">Yes</option>
+			<option value="1">No</option>
+	</param>
+
+	<param name="tooltiptype" type="radio" default="0" label="What description to display in the tooltop?" description="PARAMSVMPRODUCTTOOLTIPTYPE">
+			<option value="0">Short Description</option>
+			<option value="1">WYSIWYG Description</option>
+	</param>
+	<param name="showlink" type="radio" default="0" label="Show footer link?" description="PARAMSVMPRODUCTFOOTERLINK">
+			<option value="0">Yes</option>
+			<option value="1">No</option>
+	</param>
+  </params>
+
+ 
+    <!-- Optional parameters -->
+
+</install>

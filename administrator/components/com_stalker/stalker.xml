@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.5.0" method="upgrade">
+	<name>Stalker</name>
+	
+	<!-- The following elements are optional and free of formatting constraints -->
+	<creationDate>16 March 2010</creationDate>
+	<author>Nick Texidor</author>
+	<authorEmail>nick@texidor.com</authorEmail>
+	<authorUrl>http://www.nicktexidor.com</authorUrl>
+	<copyright>Copyright (C) 2009-2010 Nick Texidor. All rights reserved.</copyright>
+	<license>GNU/GPL</license>
+
+	<!--  The version string is recorded in the components table -->
+	<version>1.2.1</version>
+
+	<!-- The description is optional and defaults to the name -->
+	<description>Stalker: Maintain and display all your social networking links</description>
+ 
+	<!-- Component Parameters -->
+	<params>
+		<param name="iconsize" type="list" default='64' label="ICONSIZELABEL" description="ICONSIZEDESC">
+		<option value='16'>16px</option>
+		<option value='20'>20px</option>
+		<option value='24'>24px</option>
+		<option value='28'>28px</option>
+		<option value='32'>32px</option>
+		<option value='36'>36px</option>
+		<option value='40'>40px</option>
+		<option value='44'>44px</option>
+		<option value='48'>48px</option>
+		<option value='52'>52px</option>
+		<option value='56'>56px</option>
+		<option value='60'>60px</option>
+		<option value='64'>64px</option>
+		</param>
+
+	    <param name="style" type="list" default='0' label="STYLELABEL" description="STYLEDESC">
+		<option value='0'>Image</option>
+		<option value='1'>List</option>
+		<option value='2'>Text</option>
+		</param>
+
+		<param name="position" type="list" default='left' label="POSITIONLABEL" description="POSITIONDESC">
+		<option value='left'>Left</option>
+		<option value='center'>Center</option>
+		<option value='right'>Right</option>
+		<option value='horiz'>Horizontal (for List/Text)</option>
+		</param>
+
+		<param name="imageset" type="folderlist" default="default" label="IMAGESETLABEL" description="IMAGESETDESC" directory="/media/stalker/icons" filter="" exclude="" stripext="" hide_none="1" hide_default="1" />
+
+		<param name="stalkergroup" type="text" default='' label="GROUPLABEL" description="GROUPDESC"></param>
+	</params>
+
+	<!-- Database Queries to be executed on install -->
+	<install>
+		<sql>
+			<file charset="utf8" driver="mysql">install.sql</file>
+		</sql>
+	</install>
+
+	<!-- Database Queries to be executed on uninstall -->
+	<uninstall>
+		<sql>
+			<file charset="utf8" driver="mysql">uninstall.sql</file>
+		</sql>
+	</uninstall>
+
+	<!-- Custom install script to be executed on install -->
+	<installfile>install.stalker.php</installfile>
+
+	<!-- Custom uninstall script to be executed on uninstall -->
+	<uninstallfile>uninstall.stalker.php</uninstallfile>
+
+	<!-- Site Main File Copy Section -->
+	<files folder="site">
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+		<filename>stalker.php</filename>
+
+		<filename>assets/index.html</filename>
+		<filename>assets/css/index.html</filename>
+		<filename>assets/css/stalker.css</filename>
+
+		<filename>models/index.html</filename>
+		<filename>models/stalker.php</filename>
+
+		<filename>views/index.html</filename>
+
+		<filename>views/stalker/index.html</filename>
+		<filename>views/stalker/view.html.php</filename>
+
+		<filename>views/stalker/tmpl/default.php</filename>
+		<filename>views/stalker/tmpl/index.html</filename>
+	</files>
+
+	<!-- Language Files-->
+	<languages>
+		<language tag="en-GB">languages/en-GB.com_stalker.ini</language>
+	</languages>
+
+	<!-- Site Main Media File Copy Section - Joomla 1.6 is supposed to be using the media folder more, so I'm getting in there early! -->
+    <media folder="media/icons" destination="stalker/icons">
+		<folder>black</folder>
+		<folder>default</folder>
+    </media>
+
+	<administration>
+		<!-- Administration Menu Section -->
+		<menu>Stalker</menu>
+		<submenu>
+			<menu view="stalkers" layout="default">My Social Links</menu>
+			<menu view="stalkgrps" layout="default">Stalker Groups</menu>
+			<menu view="socnets" layout="default">Social Networks</menu>
+			<!-- <menu view="import" layout="default">Import/Export</menu> -->
+		</submenu>
+
+		<!-- Administration Main File Copy Section -->
+		<files folder="admin">
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>install.sql</filename>
+			<filename>install.stalker.php</filename>
+			<filename>stalker.php</filename>
+			<filename>uninstall.sql</filename>
+			<filename>uninstall.stalker.php</filename>
+			<filename>versions.txt</filename>
+
+			<filename>assets/index.html</filename>
+			<filename>assets/images/index.html</filename>
+			<filename>assets/images/install_button.png</filename>
+			<filename>assets/images/stalker_button.png</filename>
+			<filename>assets/images/upgrade_button.png</filename>
+
+			<filename>controllers/index.html</filename>
+			<filename>controllers/import.php</filename>
+			<filename>controllers/socnet.php</filename>
+			<filename>controllers/stalker.php</filename>
+			<filename>controllers/stalkerinstall.php</filename>
+			<filename>controllers/stalkeruninstall.php</filename>
+			<filename>controllers/stalkgrp.php</filename>
+
+			<filename>models/index.html</filename>
+			<filename>models/socnet.php</filename>
+			<filename>models/socnets.php</filename>
+			<filename>models/stalker.php</filename>
+			<filename>models/stalkers.php</filename>
+			<filename>models/stalkgrp.php</filename>
+			<filename>models/stalkgrps.php</filename>
+
+			<filename>tables/index.html</filename>
+			<filename>tables/socnet.php</filename>
+			<filename>tables/stalker.php</filename>
+			<filename>tables/stalkgrp.php</filename>
+
+			<filename>views/index.html</filename>
+
+			<filename>views/import/index.html</filename>
+			<filename>views/import/view.html.php</filename>
+
+			<filename>views/import/tmpl/default.php</filename>
+			<filename>views/import/tmpl/index.html</filename>
+
+			<filename>views/socnet/index.html</filename>
+			<filename>views/socnet/view.html.php</filename>
+
+			<filename>views/socnet/tmpl/form.php</filename>
+			<filename>views/socnet/tmpl/index.html</filename>
+
+			<filename>views/socnets/index.html</filename>
+			<filename>views/socnets/view.html.php</filename>
+
+			<filename>views/socnets/tmpl/default.php</filename>
+			<filename>views/socnets/tmpl/index.html</filename>
+
+			<filename>views/stalker/index.html</filename>
+			<filename>views/stalker/view.html.php</filename>
+
+			<filename>views/stalker/tmpl/form.php</filename>
+			<filename>views/stalker/tmpl/index.html</filename>
+
+			<filename>views/stalkers/index.html</filename>
+			<filename>views/stalkers/view.html.php</filename>
+
+			<filename>views/stalkers/tmpl/default.php</filename>
+			<filename>views/stalkers/tmpl/index.html</filename>
+
+			<filename>views/stalkgrp/index.html</filename>
+			<filename>views/stalkgrp/view.html.php</filename>
+
+			<filename>views/stalkgrp/tmpl/form.php</filename>
+			<filename>views/stalkgrp/tmpl/index.html</filename>
+
+			<filename>views/stalkgrps/index.html</filename>
+			<filename>views/stalkgrps/view.html.php</filename>
+
+			<filename>views/stalkgrps/tmpl/default.php</filename>
+			<filename>views/stalkgrps/tmpl/index.html</filename>
+		</files>
+
+		<!-- Language Files-->
+		<languages>
+			<language tag="en-GB">languages/en-GB.com_stalker.ini</language>
+		</languages>
+	</administration>
+</install>
