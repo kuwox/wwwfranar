@@ -137,7 +137,7 @@ Todos los derechos reservados - Franar C.A.</p>
     </div>
 </div>
 <div class="cleared"></div>
-<p class="art-page-footer">Creado por: <a href="http://www.xpoweb.com">Xpoweb.com</a>.</p>
+<p class="art-page-footer">Creado por: <a href="http://www.twitter.com/kuwox">Juan Spolzino</a>.</p>
 
 </div>
 
